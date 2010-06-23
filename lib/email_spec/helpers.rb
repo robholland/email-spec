@@ -68,7 +68,7 @@ module EmailSpec
     end
 
     def links_in_email(email)
-      URI.extract(email.body, ['http', 'https'])
+      URI.extract(email.body.to_s, ['http', 'https'])
     end
 
     private
